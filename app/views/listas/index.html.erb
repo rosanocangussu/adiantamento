@@ -12,9 +12,9 @@
  </tr>
   <% lista.each do |todos| %>
   <tr>
-    <td><%= mascara(todos.cpf)%></td>
+    <td><%= link_to mascara(todos.cpf), :action => "edit", :id => lista %></td>
     <td><%= todos.nome %></td>
-    <% if todos.quant == 1 %>
+    <% if todos.quant == 1 || todos.quant == 0 %>
       <% cor="green"%>
       <td id="pegar" class="qtde" align="center" style="color: <%=cor%>"><%= todos.quant %></td>
    <% else %>

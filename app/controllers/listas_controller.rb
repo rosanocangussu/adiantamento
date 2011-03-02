@@ -97,12 +97,17 @@ class ListasController < ApplicationController
 def menos
    
    @lista = Lista.find(params[:id])
-   if @lista.quant == nil
-      @lista.quant = nil
+   if @lista.quant == nil || @lista.quant == 0
+      @lista.quant = 0
+      @lista.save!
       
    else
       @lista.quant -= 1
-   @lista.save!
+      if @lista.quant == 0
+         @lista.quant = 0
+         @lista.save!
+      end  
+      @lista.save!
    end
    redirect_to(listas_url) 
   end
