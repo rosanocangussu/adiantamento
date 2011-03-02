@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cpf: MyString
+  nome: MyString
+  setor: MyString
+  quant: 1
+
+two:
+  cpf: MyString
+  nome: MyString
+  setor: MyString
+  quant: 1

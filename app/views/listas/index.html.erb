@@ -1,0 +1,32 @@
+
+
+<% content_for :primeiro do  %>
+  <% @listas.each do |setor, lista|  %>
+    <h2><%= setor %></h2>
+  <table cellspacing="0"border="1px" width="100%" class="todos">
+ <tr>
+   <th width="20%">Cpf</th>
+   <th width="60%">Nome</th>
+   <th width="5%">Qtde</th>
+   <th width="20%" colspan="3">Ações</th>
+ </tr>
+  <% lista.each do |todos| %>
+  <tr>
+    <td><%= mascara(todos.cpf)%></td>
+    <td><%= todos.nome %></td>
+    <% if todos.quant == 1 %>
+      <% cor="green"%>
+      <td id="pegar" class="qtde" align="center" style="color: <%=cor%>"><%= todos.quant %></td>
+   <% else %>
+     <% cor="red"%>
+     <td id="pegar" class="qtde" align="center" style="color: <%=cor%>"><%= todos.quant %></td>
+   <%end%>  
+   <td align="center" class="mais"><%= link_to ' + ', :controller => :listas, :action => :mais, :id => todos, :remote => true %></td>
+   <td align="center" class="menos"><%= link_to ' - ', :controller => :listas, :action => :menos, :id => todos, :remote => true %></td>
+    <td width="5%" align="center"><%= link_to 'Excluir', todos, :confirm => 'Are you sure?', :method => :delete %></td>
+ </tr>
+  <% end %>
+</table>
+<% end  %>
+<% end  %>
+

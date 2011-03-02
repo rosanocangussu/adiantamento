@@ -1,0 +1,21 @@
+<%= simple_form_for(@lista) do |f| %>
+  <% if @lista.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lista.errors.count, "error") %> prohibited this lista from being saved:</h2>
+
+      <ul>
+      <% @lista.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :cpf, :input_html => {:size => 11 } %>
+    <%= f.input :nome %><br />
+    <%= f.input :setor,:collection => Lista::SETOR %>
+    <%= f.input :quant %>
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @lista.cpf %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @lista.nome %>
+</p>
+
+<p>
+  <b>Setor:</b>
+  <%= @lista.setor %>
+</p>
+
+<p>
+  <b>Quant:</b>
+  <%= @lista.quant %>
+</p>
+
+
+<%= link_to 'Edit', edit_lista_path(@lista) %> |
+<%= link_to 'Back', listas_path %>
