@@ -61,6 +61,7 @@
          <table class="table table-striped">
             <thead>
               <tr>
+                <th>Id</th>
                 <th>Produto</th>
                 <th>Quantidade</th>
                 <th>Opções</th>
@@ -68,6 +69,7 @@
             </thead>
           <tbody>
             <tr ng-repeat="item in itens">
+              <td><strong>{{ item.id }}</strong></td>
               <td><strong>{{ item.produto }}</strong></td>
               <td>{{ item.quantidade }}</td>
               <td><button class="btn btn-danger" ng-click="deletaItem()">Excluir</button> </td>
