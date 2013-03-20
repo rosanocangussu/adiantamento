@@ -11,4 +11,8 @@ function ListaComprasController($scope) {
                            comprado: false});
         $scope.item.produto = $scope.item.quantidade = '';
     };
+    
+     $scope.deletaItem = function () {
+        document.getElementById('$scope.itens.id').hide();
+    };
 }
