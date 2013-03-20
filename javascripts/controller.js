@@ -5,7 +5,7 @@ function ListaComprasController($scope) {
     ];
     
     $scope.adicionaItem = function () {
-        var quant =  1;
+        var quant =  $scope.itens.length;
         $scope.itens.push({id: quant ,produto: $scope.item.produto,
                            quantidade: $scope.item.quantidade,
                            comprado: false});
