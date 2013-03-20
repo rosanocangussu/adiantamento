@@ -43,7 +43,22 @@
           </div>
             
         </div> 
-         asdf
+        <div ng-controller="ListaComprasController">
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr ng-repeat="item in itens">
+              <td><strong>{{ item.produto }}</strong></td>
+              <td>{{ item.quantidade }}</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
     </div>
   </body>
 </html>
