@@ -13,6 +13,6 @@ function ListaComprasController($scope) {
     };
     
      $scope.deletaItem = function () {
-       $this.hide();
+       document.getElementById("1").style.display = 'none';
     };
 }
