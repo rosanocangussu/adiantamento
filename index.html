@@ -69,10 +69,12 @@
             </thead>
           <tbody>
             <tr ng-repeat="item in itens">
-              <td id="{{item.id}}"><strong>{{ item.id }}</strong></td>
-              <td><strong>{{ item.produto }}</strong></td>
-              <td>{{ item.quantidade }}</td>
-              <td><button class="btn btn-danger" ng-click="deletaItem()">Excluir</button> </td>
+              <div id="{{item.id}}"> 
+                  <td<strong>{{ item.id }}</strong></td>
+                  <td><strong>{{ item.produto }}</strong></td>
+                  <td>{{ item.quantidade }}</td>
+                  <td><button class="btn btn-danger" ng-click="deletaItem()">Excluir</button> </td>
+              </div>
           </tr>
           </tbody>
         </table>
