@@ -13,8 +13,6 @@ function ListaComprasController($scope) {
     };
     
      $scope.deletaItem = function () {
-        var q = $scope.itens.id; 
-        console.log(q);
-        console.log(document.getElementById("item.id"))
+       $this.hide();
     };
 }
