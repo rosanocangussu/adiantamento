@@ -17,5 +17,6 @@ function ListaComprasController($scope) {
       console.log(botao);
       var n = botao.toString();
        document.getElementById(n).style.display = 'none';
+       botao = '';
     };
 }
