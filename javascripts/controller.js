@@ -13,7 +13,7 @@ function ListaComprasController($scope) {
     };
     
      $scope.deletaItem = function () {
-      var botao = document.getElementById("button").value;
+      var botao = document.getElementById("botao").value;
       console.log(botao);
        document.getElementById("1").style.display = 'none';
     };
