@@ -14,7 +14,7 @@ function ListaComprasController($scope) {
     
      $scope.deletaItem = function () {
       var botao = document.getElementById("botao").value;
-      
+      console.log(botao);
       var n = botao.toString();
        document.getElementById(n).style.display = 'none';
     };
