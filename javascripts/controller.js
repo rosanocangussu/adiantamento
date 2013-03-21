@@ -13,8 +13,8 @@ function ListaComprasController($scope) {
     };
     
      $scope.deletaItem = function () {
-       var a = this.value();
-       console.log(a);
+      var botao = document.getElementById("button").value;
+      console.log(botao);
        document.getElementById("1").style.display = 'none';
     };
 }
