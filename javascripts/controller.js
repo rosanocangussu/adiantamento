@@ -14,6 +14,6 @@ function ListaComprasController($scope) {
     
      $scope.deletaItem = function () {
       
-       document.getElementById($scope.itens.id.attr('id')).style.display = 'none';
+       document.getElementById("1").style.display = 'none';
     };
 }
