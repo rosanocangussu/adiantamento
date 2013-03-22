@@ -13,8 +13,8 @@ function ListaComprasController($scope) {
     };
     
      $scope.deletaItem = function () {
-      var botao = document.getElementById("botao").value;
-      alert(botao);
+      var botao = document.getElementById("id").value;
+
       console.log(botao);
       var n = botao.toString();
        document.getElementById(n).style.display = 'none';
