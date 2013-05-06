@@ -4,12 +4,15 @@
         <title>DOM - Nivel 2 </title>
         <script type="text/javascript">
             window.onload = function(){
+            var botao = document.getElementById("btn");
+            botal.onclick = function(){
             var title = document.getElementById("def");
             title.style.backgroundColor="#00ff00";
             var td = document.getElementsByTagName("h2");
             td[1].style.backgroundColor = "#ffff00";
             td[2].style.color = "#ff0000";
             td[3].style.fontSize="50px";
+            }
             }
         </script>
     </head>
@@ -35,6 +38,6 @@
             <li>DOM para HTML</li>
             <li>DOM para XML</li>
         </ul>
-        
+        <button type="button" id="btn">Rodar Script</button>
     </body>
 </html>
