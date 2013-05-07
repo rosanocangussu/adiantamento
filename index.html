@@ -8,10 +8,10 @@
         //Obtendo o texto digitado pelo usuário:
         var texto = document.getElementById("txt_texto").value;
         //Armazenando a referência da Div dentro de uma variável:
-        var div61 = document.getElementById("61"); 
-        var div62 = document.getElementById("62");
+        var div61 = document.getElementById("u61"); 
+        var div62 = document.getElementById("u62");
         //Inserindo o texto dentro da Div:
-        div61.innerHTML = "<br />"+texto; 
+        div61.innerHTML += "<li>"+texto+"</li>"; 
         //Limpando a caixa de texto:
         //document.getElementById("txt_texto").value = ""; 
         //Focando a caixa de texto:
@@ -28,8 +28,16 @@
         
       </form>
      <div class="row">
-       <div class="span6" id="61"></div>
-       <div class="span6" id="62"></div>
+       <div class="span6" id="61">
+         <ul id="u61">
+           
+         </ul>
+       </div>
+       <div class="span6" id="62">
+         <ul id="u62">
+           
+         </ul>
+       </div>
      </div>
      <div class="row">
        <div class="span9">
