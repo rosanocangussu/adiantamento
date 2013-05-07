@@ -1,52 +1,25 @@
 <html>
- 
-        <head>
-        <title>www.javascript-examples.net | A List From An Array</title> 
-
-                <script type="text/javascript">
-
-                        // wait for the page to load
-                        function makelist(){
-                                
-                                // Establish the array which acts as a data source for the list
-                                var listData = [ 'Blue' , 'Red' , 'White' , 'Green' , 'Black' , 'Orange'];
-
-                                // Make a container element for the list - which is a <div>
-                                // You don't actually need this container to make it work
-                                var listContainer = document.createElement("div");
-
-                                // add it to the page
-                                document.getElementsByTagName("body")[0].appendChild(listContainer);
-
-                                // Make the list itself which is a <ul>
-                                var listElement = document.createElement("ul");
-
-                                // add it to the page
-                                listContainer.appendChild(listElement);
-
-                                // Set up a loop that goes through the items in listItems one at a time
-                                var numberOfListItems = listData.length;
-
-                                for( var i =  0 ; i < numberOfListItems ; ++i){
-                
-                                        // create a <li> for each one.
-                                        var listItem = document.createElement("li");
-
-                                        // add the item text
-                                        listItem.innerHTML = listData[i];
-
-                                        // add listItem to the listElement
-                                        listElement.appendChild(listItem);
-
-                                }
-
-                        }
-
-                </script>
-
-        </head>
-
-        <body onLoad='makelist()'></body>
-
+<head>
+ <title>oi</title>
+ <script language="javascript"> 
+function posta(){
+//Obtendo o texto digitado pelo usuário:
+var texto = document.getElementById("txt_texto").value;
+//Armazenando a referência da Div dentro de uma variável:
+var div = document.getElementById("resposta"); 
+//Inserindo o texto dentro da Div:
+div.innerHTML = texto; 
+//Limpando a caixa de texto:
+document.getElementById("txt_texto").value = ""; 
+//Focando a caixa de texto:
+document.getElementById("txt_texto").focus(); 
+} 
+</script> 
+</head>
+<body>
+<p><input type="text" id="txt_texto" /></p>
+<p><input type="button" id="button" value="Postar via Javascript" onclick="posta()" /></p>
+<br />
+<p><div id="resposta"></div>
+</body>
 </html>
- 
