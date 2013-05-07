@@ -3,7 +3,13 @@
         <meta charset="utf-8">
         <title>DOM - Nivel 2 </title>
         <script type="text/javascript">
+            
             window.onload = function(){
+            var Nb = new Array();
+            for(i=0;i<10;i++){
+                Nb[i]=i;
+            }
+            alert(Nb);
             var botao = document.getElementById("btn");
             botao.onclick = function(){
             var title = document.getElementById("def");
