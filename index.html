@@ -1,59 +1,52 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>DOM - Nivel 2 </title>
-        <script type="text/javascript">
-            
-            window.onload = function(){
-            var Nb = new Array();
-            for(i=0;i<10;i++){
-                Nb[i]=i;
-            }
-            alert(Nb);
-            var botao = document.getElementById("btn");
-            botao.onclick = function(){
-            var title = document.getElementById("def");
-            title.style.backgroundColor="#00ff00";
-            var td = document.getElementsByTagName("h2");
-            td[1].style.backgroundColor = "#ffff00";
-            td[2].style.color = "#ff0000";
-            td[3].style.fontSize="50px";
-            }
-            
-           
-            }
-        </script>
-        <link href="stylesheets/stylesheet.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-    <div class="hero-unit">
-    <img src="..." class="img-polaroid">
-      <h1 align="center">Github + Bootstrap + Javascript</spam> </h1>
-    </div>
-        <div class="container">
-        <h1>Introdução</h1>
-            <p class="um">O DOM é uma API (Application programmng Interface), Interface de 
-            programação para Aplicativos, destinada a documentos escritos com marcação
-            <abbr title="HyperText Makup language">HTML</abbr> ou XML.
-            </p>
-        <h2>Nada</h2> 
-        <h3>Teste do Luiz</h3>
-        <h2>tudo</h2>
-        <h2 id="def">Definição</h2>
-            <blockquote>
-                <p>
-                    O DOM - Document Object Model do <a href="http://www.w3.org/" hreflang="en">W3C</a>
-                    é uma interface independente de plataforma e linguagem que permite os programas e
-                    scripts acessar e atualizar dinamicamente a estrutra, o conteudo e a estilização de 
-                    documentos.
-                </p>
-            </blockquote>
-        <h2 id="tipo">Tipos de <small>DOM</small></h2>    
-        <ul>
-            <li>DOM para HTML</li>
-            <li>DOM para XML</li>
-        </ul>
-        <button type="button" id="btn">Rodar Script</button>
-        </div>
-    </body>
+ 
+        <head>
+        <title>www.javascript-examples.net | A List From An Array</title> 
+
+                <script type="text/javascript">
+
+                        // wait for the page to load
+                        function makelist(){
+                                
+                                // Establish the array which acts as a data source for the list
+                                var listData = [ 'Blue' , 'Red' , 'White' , 'Green' , 'Black' , 'Orange'];
+
+                                // Make a container element for the list - which is a <div>
+                                // You don't actually need this container to make it work
+                                var listContainer = document.createElement("div");
+
+                                // add it to the page
+                                document.getElementsByTagName("body")[0].appendChild(listContainer);
+
+                                // Make the list itself which is a <ul>
+                                var listElement = document.createElement("ul");
+
+                                // add it to the page
+                                listContainer.appendChild(listElement);
+
+                                // Set up a loop that goes through the items in listItems one at a time
+                                var numberOfListItems = listData.length;
+
+                                for( var i =  0 ; i < numberOfListItems ; ++i){
+                
+                                        // create a <li> for each one.
+                                        var listItem = document.createElement("li");
+
+                                        // add the item text
+                                        listItem.innerHTML = listData[i];
+
+                                        // add listItem to the listElement
+                                        listElement.appendChild(listItem);
+
+                                }
+
+                        }
+
+                </script>
+
+        </head>
+
+        <body onLoad='makelist()'></body>
+
 </html>
+ 
