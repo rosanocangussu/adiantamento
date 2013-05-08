@@ -5,6 +5,7 @@
    <link rel="stylesheet" href="stylesheets/stylesheet.css">
    <script language="javascript"> 
    var array1 = new Array();
+   var array2 = new Array();
    
     function posta(){
         //Obtendo o texto digitado pelo usuário:
@@ -17,7 +18,7 @@
         div62.innerHTML += "<input type=\"checkbox\" name=\"vehicle\" value="+texto+">"+texto +"<br>";
         array1.push(texto);
         
-        alert(array1);
+        
         
         //Limpando a caixa de texto:
         //document.getElementById("txt_texto").value = ""; 
@@ -25,6 +26,17 @@
         
 //document.getElementById("txt_texto").focus(); 
     } 
+    
+    function marcados(){
+      for(i=0; i < array1.length; i++){
+        if( array[i].checked == true){
+          array2.push(array[i].value);
+        }
+      }
+      
+     
+      
+    }
     
     
   
@@ -54,7 +66,7 @@
      </div>
      <div class="row">
        <div class="span9">
-        <p><input type="button" class="brn btn-primary" id="button" value="Comparar Arrays" onclick="comparar()" /></p>
+        <p><input type="button" class="brn btn-primary" id="button" value="Comparar Arrays" onclick="marcados()" /></p>
        </div>
      </div>
    </div>
