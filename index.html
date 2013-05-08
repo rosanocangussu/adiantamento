@@ -30,13 +30,9 @@
     function marcados(){
       var lista = document.forms["formulario"].elements["vehicle"];
       for(i=0; i < lista.length; i++){
-        if(lista[i].checked){
+        if!(lista[i].checked){
           array2.push(lista[i].value)
-        }else{
-         var temp = array2.indexOf(lista[i].value);
-         array2.splice(temp,1);
-        }      }
-      
+        }
      alert(array2);
       
     }
