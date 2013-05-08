@@ -32,8 +32,9 @@
       for(i=0; i < lista.length; i++){
         if(lista[i].checked){
           array2.push(lista[i].value)
-        }
-      }
+        }else{
+          array2.delete(i);
+        }      }
       
      alert(array2);
       
