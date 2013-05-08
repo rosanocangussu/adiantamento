@@ -33,7 +33,8 @@
         if(lista[i].checked){
           array2.push(lista[i].value)
         }else{
-          array2.remove(i);
+         var temp = array2.indexOf(lista[i].value]);
+         array2.splice(temp,1);
         }      }
       
      alert(array2);
