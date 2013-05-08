@@ -15,8 +15,7 @@
         div61.innerHTML += "<li><span class=\"badge badge-important\"+>"+texto+"</span></li>"; 
         div62.innerHTML += "<input type=\"checkbox\" name=\"vehicle\" value="+texto+">"+texto +"<br>";
         
-        array1.push(texto);
-       
+        verifica(array1,texto);
         //Limpando a caixa de texto:
         //document.getElementById("txt_texto").value = ""; 
         //Focando a caixa de texto:
@@ -24,8 +23,14 @@
 //document.getElementById("txt_texto").focus(); 
     } 
     
-    function verifica(){
-      alert(array1);
+    function verifica(array,texto){
+      for(i=0; i < array.length; i++){
+        if(array1[i].value == texto){
+          alert("Já existe essa parada no array!");
+        }else{
+          array1.push(texto);
+        }
+      }
     }
 </script>  
   </head>
