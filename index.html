@@ -5,10 +5,10 @@
    <link rel="stylesheet" href="stylesheets/stylesheet.css">
    <script language="javascript"> 
    var array1 = new Array();
-    var texto = document.getElementById("txt_texto").value;
+   
     function posta(){
         //Obtendo o texto digitado pelo usuário:
-       
+        var texto = document.getElementById("txt_texto").value;
         //Armazenando a referência da Div dentro de uma variável:
         var div61 = document.getElementById("u61"); 
         var div62 = document.getElementById("u62");
@@ -16,7 +16,7 @@
         div61.innerHTML += "<li><span class=\"badge badge-important\"+>"+texto+"</span></li>"; 
         div62.innerHTML += "<input type=\"checkbox\" name=\"vehicle\" value="+texto+">"+texto +"<br>";
         
-        verifica();
+        verifica(texto);
         //Limpando a caixa de texto:
         //document.getElementById("txt_texto").value = ""; 
         //Focando a caixa de texto:
@@ -24,9 +24,9 @@
 //document.getElementById("txt_texto").focus(); 
     } 
     
-    function verifica(){
+    function verifica(texto){
       for(i=0; i < array1.length; i++){
-        if(array1[i].value == texto){
+        if(array1[i].value == this.texto){
           alert("Já existe essa parada no array!");
         }else{
           array1.push(texto);
