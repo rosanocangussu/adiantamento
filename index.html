@@ -28,12 +28,13 @@
     } 
     
     function marcados(){
-      for(i=0; i < array1.length; i++){
-        alert(array1[i]);
+      var lista = document.forms["formulario"].elements["vehicle"];
+      for(i=0; i < lista.length; i++){
+        alert(lista[i])
       }
       
      
-      alert(array2);
+      
     }
     
     
@@ -55,7 +56,7 @@
          </ol>
        </div>
        <div class="span6" id="62">
-         <form>
+         <form name="formularo">
            <ul id="u62">
            
           </ul>
