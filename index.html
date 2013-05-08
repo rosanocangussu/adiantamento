@@ -15,8 +15,9 @@
         //Inserindo o texto dentro da Div:
         div61.innerHTML += "<li><span class=\"badge badge-important\"+>"+texto+"</span></li>"; 
         div62.innerHTML += "<input type=\"checkbox\" name=\"vehicle\" value="+texto+">"+texto +"<br>";
+        array1.push(texto);
         
-        verifica(texto);
+        
         //Limpando a caixa de texto:
         //document.getElementById("txt_texto").value = ""; 
         //Focando a caixa de texto:
@@ -24,18 +25,7 @@
 //document.getElementById("txt_texto").focus(); 
     } 
     
-    function verifica(texto){
-      if(array1.length == 0){
-        array1.push(this.texto);
-      }
-      for(i=0; i < array1.length; i++){
-        {
-          if(array1[i].value == this.texto){
-            alert("Registro já existe!"); 
-          }
-        }
-      }
-    }
+    
   
 </script>  
   </head>
