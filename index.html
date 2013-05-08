@@ -15,7 +15,7 @@
         //Inserindo o texto dentro da Div:
         div61.innerHTML += "<li><span class=\"badge badge-important\"+>"+texto+"</span></li>"; 
         div62.innerHTML += "<input type=\"checkbox\" name=\"vehicle\" value="+texto+">"+texto +"<br>";
-        array1.push(texto);
+        
         verifica(texto);
         //Limpando a caixa de texto:
         //document.getElementById("txt_texto").value = ""; 
@@ -25,11 +25,15 @@
     } 
     
     function verifica(texto){
+      if(array1.lenght == 0){
+        array1.push(this.texto);
+      }else{
       for(i=0; i < array1.length; i++){
         {
           alert("nada");
         }
       }
+    }
     }
 </script>  
   </head>
