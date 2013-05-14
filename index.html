@@ -1,77 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-   <title>Javascript</title>
-   <link rel="stylesheet" href="stylesheets/stylesheet.css">
-   <script language="javascript"> 
-   var array1 = new Array();
-   var array2 = new Array();
-   
-    function posta(){
-        //Obtendo o texto digitado pelo usuário:
-        var texto = document.getElementById("txt_texto").value;
-        //Armazenando a referência da Div dentro de uma variável:
-        var div61 = document.getElementById("u61"); 
-        var div62 = document.getElementById("u62");
-        //Inserindo o texto dentro da Div:
-        div61.innerHTML += "<li><span class=\"badge badge-important\"+>"+texto+"</span></li>"; 
-        div62.innerHTML += "<input type=\"checkbox\" name=\"vehicle\" value="+texto+">"+texto +"<br>";
-        array1.push(texto);
-        
-        
-        
-        //Limpando a caixa de texto:
-        //document.getElementById("txt_texto").value = ""; 
-        //Focando a caixa de texto:
-        
-//document.getElementById("txt_texto").focus(); 
-    } 
-    
-    function marcados(){
-      var lista = document.forms["formulario"].elements["vehicle"];
-      for(i=0; i < lista.length; i++){
-        if(!lista[i].checked){
-          array2.push(lista[i].value)
-        }
-      }  
-     alert(array2);
-      
-    }
-    
-    
-  
-</script>  
-  </head>
- <body>
-   <div class="container">
-      <form action="">
-        <p><input type="text" id="txt_texto" /></p>
-        <p><input type="button" class="brn btn-primary" id="button" value="Postar via Javascript" onclick="posta()" /></p>
-        <br />
-        
-      </form>
-     <div class="row">
-       <div class="span6" id="61">
-         <ol id="u61">
-           
-         </ol>
-       </div>
-       <div class="span6" id="62">
-         <form name="formulario">
-           <ul id="u62">
-           
-          </ul>
-        </form>
-       </div>
-     </div>
-     <div class="row">
-       <div class="span9">
-        <p><input type="button" class="brn btn-primary" id="button" value="Comparar Arrays" onclick="marcados()" /></p>
-       </div>
-     </div>
-   </div>
-  
- </body>
- 
- 
-</html>
+<script src="/path/to/chartkick.js"></script>
+<div id="chart-1" style="height: 300px;"></div>
+<script>
+  var chart = document.getElementById("chart-1");
+  new Chartkick.PieChart(chart, {"Football": 45, "Soccer": 56, "Basketball": 98});
+  // or remote
+  new Chartkick.LineChart(chart, "/charts/stocks");
+</script>
