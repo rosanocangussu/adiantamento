@@ -3,19 +3,29 @@
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
   </head>
   <body>
-    <form class="pure-form">
-      <fieldset>
-          <legend>A compact inline form</legend>
+    <form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>A Stacked Form</legend>
 
-          <input type="text" placeholder="Email">
-          <input type="password" placeholder="Password">
+        <label for="email">Email</label>
+        <input id="email" type="text" placeholder="Email">
 
-          <label for="remember">
-              <input id="remember" type="checkbox"> Remember me
-          </label>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password">
 
-          <button type="submit" class="pure-button notice">Sign in</button>
-      </fieldset>
-  </form>
+        <label for="state">State</label>
+        <select id="state">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
+        </select>
+
+        <label for="remember" class="pure-checkbox">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="pure-button notice">Sign in</button>
+    </fieldset>
+</form>
   </body>
 </html>
